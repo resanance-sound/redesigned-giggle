@@ -1,11 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Post from './pages/blogpage/post'
 import Home from './pages/homePage'
+import Dashboard from './pages/dashboard/overview/DashBoard';
 
 function App() {
+  
   return (
     <Router>
       <div className="App">
@@ -18,11 +19,15 @@ function App() {
                 <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/post" element={<Post />} />
+                <Route path="/myDash" element={<Dashboard />} />
                 </Routes>
             </div>
           </div>
           <Link to='/'>Home Page</Link> 
+          <br />
           <Link to='/post'>Blog Page</Link> 
+          <br />
+          <Link to='/myDash'>MyDashBoard</Link> 
       </div>
   </Router>
   );
